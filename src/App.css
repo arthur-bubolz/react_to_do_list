@@ -1,0 +1,98 @@
+/* App.css */
+body{
+  background-color: rgb(0, 247, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  background-color: rgb(210, 237, 238);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+/* Alinhando botões*/
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  margin: 2px; /* Adicionando uma margem entre os botões */
+}
+
+/* Adicionando cor de fundo para os botões de conclusão e remoção */
+.todo button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.todo button:last-child {
+  background-color: #dc3545;
+}
+
+.criar-tarefa {
+  display: flex; 
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 7px solid rgba(73, 73, 73, 0.5);
+}
+
+.search input {
+  height: 20px;
+  width: 250px;
+}
+
+.filter {
+  padding: 5px;
+  border-bottom: 7px solid rgba(73, 73, 73, 0.5); 
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all_of {
+  border-top: 7px solid rgba(73, 73, 73, 0.5);
+}
