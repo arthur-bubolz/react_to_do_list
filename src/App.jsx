@@ -4,27 +4,11 @@ import Todo from './components/Todo'
 import TodoForm from './components/TodoForm'
 import Search from './components/Search'
 import Filter from './components/Filter'
+import moment from 'moment';
+
 
 function App() {
   const [todos, setTodos] = useState([
-    {
-      id:1,
-      text: "Estudar para Prova",
-      category: "Estudos",
-      isCompleted: false,
-    },
-    {
-      id:2,
-      text: "Ir pra academia",
-      category: "Pessoal",
-      isCompleted: false,
-    },
-    {
-      id:3,
-      text: "Fazer Trabalho de Si2",
-      category: "Trabalho",
-      isCompleted: false,
-    }
   ])
 
   const [search,setSearch] = useState("");
@@ -33,11 +17,14 @@ function App() {
   const [sort,setSort] = useState("asd");
 
   const addTodo = (text,category) => {
+    const formattedDate = moment().format('DD-MM-YYYY');
+    const hora = new Date().toLocaleTimeString();
     const newTodo = [...todos,{
       id: Math.floor(Math.random() * (999999999)),
       text,
       category,
       isCompleted: false,
+      timestamp: `Data: ${formattedDate} Hora: ${hora}`,
     }]
 
     setTodos(newTodo);
