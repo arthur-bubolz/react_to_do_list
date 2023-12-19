@@ -5,6 +5,7 @@ const Todo = ({todo, removeTodo, completeTodo}) => {
             style={{textDecoration: todo.isCompleted ? "line-through" : ""}}>
                 <p>{todo.text}</p>
                 <p>{todo.category}</p>
+                <p>{todo.timestamp}</p>
             </div>
             <div className='buttons'>
                 <button onClick={() => completeTodo(todo.id)}>🗸</button>
